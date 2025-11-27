@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="email" placeholder="Enter email">
+    <button onclick="check()">Submit</button>
+    <p id="msg"></p>
+
+    <script>
+        function check() {
+            let email = document.getElementById("email").value;
+
+            if (email === "") {
+                document.getElementById("msg").innerText = "Email required!";
+            } else {
+                document.getElementById("msg").innerText = "Submitted!";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

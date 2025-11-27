@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Countdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f7efe7;
+            padding-top: 80px;
+        }
+        .box {
+            background: white;
+            width: 350px;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #e056fd;
+        }
+        button {
+            padding: 8px 20px;
+            margin-top: 10px;
+            border: none;
+            background: #ff6b81;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff4757;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>🎂 Birthday Countdown 🎂</h2>
+        <label>Select Your Birthday:</label><br><br>
+        <input type="date" id="birthday"><br><br>
+        <button onclick="findDays()">Calculate</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function findDays() {
+            let bday = new Date(document.getElementById("birthday").value);
+            let today = new Date();
+
+            // birthday year adjust
+            bday.setFullYear(today.getFullYear());
+
+            // if birthday already passed this year → next year
+            if (bday < today) {
+                bday.setFullYear(today.getFullYear() + 1);
+            }
+
+            let difference = bday - today;
+            let days = Math.ceil(difference / (1000 * 60 * 60 * 24));
+
+            document.getElementById("result").innerHTML = `🎉 Your birthday is in ${days} days! 🎉`;
+        }
+    </script>
+
+</body>
+</html>

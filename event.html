@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <select id="one" onchange="myfunction()">
+        <option value="APPLE">apple</option>
+        <option value="ORANGE">orange</option>
+        <option value="GUVA">guva</option>
+    </select>
+    <script>
+        function myfunction(){
+            var x=document.getElementById("one").value;
+            document.getElementById("demo").innerHTML="you selected :"+x;
+        }
+    </script>
+    <img src="apple.webp" onmouseover="bigImg(this)" onmouseout="normalImage(this)" width="50" height="50">
+    <script>
+        function bigImg(a){
+            a.style.height="100px";
+            a.style.width="100px";
+        }
+        function normalImage(a){
+            a.style.height="32px";
+            a.style.width="32px";
+        }
+    </script>
+    <input type="text" onkeydown="myfun()">
+    <script>
+        function myfun(){
+            alert("you pressed a key");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let json1 = "Deva";
+        console.log(json1);
+        let json2 = 22;
+        console.log(json2);
+
+        let json3 = {
+            "Stock": "TCS",
+            "Price": 3500
+        }
+        console.log(json3);
+        let one=JSON.stringify(json3)
+        console.log(one);
+        
+        let json4 = ["abi", 55, true]
+        console.log(json4);
+        let json5 = `[
+            {
+                "Stock": "TCS",
+                "Price": 3500
+            },
+            {
+                "Stock": "HUL",
+                "Price": 5500
+            },
+            {
+                "Stock": "SBI",
+                "Price": 1500
+            }
+        ]`
+        console.log(json5);
+        let demo=JSON.parse(json5);
+        console.log(demo);
+        
+    </script>
+</body>
+
+</html>

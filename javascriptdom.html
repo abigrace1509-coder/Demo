@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="title">Hello...</p>
+    <p class="title">Welcome</p>
+    <script>
+        document.querySelectorAll(".title")[0].style.color="orange";
+        document.querySelectorAll(".title")[1].style.color="orange";
+        // t.style.color="blue";
+        // t.style.background="yellow";
+        // t.style.fontSize="24px";
+    </script>
+    <p id="list">Old Text</p>
+    <script>
+        document.getElementById("list").innerText="New Text";
+        document.getElementById("list").innerHTML="<b>New Text</b>";
+    </script>
+</body>
+</html>

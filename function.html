@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    without parameter
+    function user() {
+        alert("Good morning");
+    }
+    user();
+
+    // with parameter
+    function input(name) {
+        // concatination
+        let msg="Hello "+name+" I'm learning JS!";
+        document.write(msg);
+    }
+    // invoke method
+    input("Deva");
+
+    // return function
+    function add(a,b) {
+        return a*b;
+    }
+    let result=add(10,5);
+    console.log("Return function:"+result);
+
+    // Anonymas function
+    const showMsg=function(){
+        console.log("This is Anonyms function");
+    }
+    showMsg();
+
+    // Arrow function =>short & modern
+    let devide=(x,y)=>{
+        return x/y;
+    }
+    console.log(devide(20,2));
+
+    // Nested function
+    function outer(){
+        alert("Nested function");
+        function inner(){
+            console.log("Inner function");
+            
+        }
+        inner();
+    }
+    outer();
+
+    // callback function
+    function demo(callback){
+        console.log("Hello user!");
+        callback();
+    }
+    function index(){
+        alert("Good bye!")
+    }
+    demo(index);
+
+    // Immediately invoked function Expressions(IIFE)
+    (function(){
+        console.log("Invoked function");
+        
+    })();
+    
+    </script>
+</body>
+</html>

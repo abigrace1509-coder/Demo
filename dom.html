@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="title">Hello</h2>
+    <script>
+        let t = document.getElementById("title");
+        t.style.color = "red";
+    </script>
+
+    <p class="msg">Welcome</p>
+    <p class="msg">Hello world</p>
+    <script>
+        let items = document.getElementsByClassName("msg");
+        items[1].style.color = "blue";
+    </script>
+
+    <p class="msgs">Welcome.....</p>
+    <p class="msgs">Hello world......</p>
+    <script>
+        let it = document.querySelector(".msgs");
+        it.style.color = "green";
+        it.style.background = "yellow";
+        it.style.fontSize = "24px";
+
+    </script>
+
+    <p class="t">one...</p>
+    <p class="t">two...</p>
+    <script>
+        document.querySelectorAll(".t")[0].style.color = "orange";
+        document.querySelectorAll(".t")[1].style.color = "orange";
+    </script>
+
+    <p id="three">old text</p>
+    <script>
+        document.getElementById("three").innerText = "New text";
+        document.getElementById("three").innerHTML = "<i>New Text</i>";
+    </script>
+
+    <ul id="list"></ul>
+    <script>
+        let li = document.createElement("li");
+        li.innerText = "apple";
+        li.innerText = "mango";
+        document.getElementById("list").appendChild(li);
+        // document.getElementById("list").appendChild(li);
+    </script>
+
+    <p id="rem">Delete me</p>
+    <script>
+        let r = document.getElementById("rem");
+        r.remove();
+    </script>
+
+    <button id="btn">ckick me</button>
+    <p id="o"></p>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("o").innerText = "Button clicked!";
+        }
+    </script>
+
+    <img id="myImage" src="apple.webp" width="250">
+    <br><br>
+    <!-- Button -->
+    <button onclick="changeImage()">Change Image</button>
+    <script>
+        function changeImage() {
+            document
+                .getElementById("myImage")
+                .setAttribute("src", "banana.webp");
+        }
+    </script>
+
+</body>
+
+</html>
